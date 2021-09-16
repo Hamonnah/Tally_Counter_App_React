@@ -1,0 +1,10 @@
+.Number {
+    background-color: #282c34;
+    font-size: calc(30px + 2vmin);
+    color: white;
+    padding: 20px 40px 20px 40px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+}
