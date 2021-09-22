@@ -47,19 +47,33 @@ function App() {
   
   }
 
-  function Increment() {
+  function increment() {
     setNumber(number + 1);
     incrementLevel(number);
   }
 
-  const [count, setCount] = useState(0);
+  const handleClick = () => {
+    setInterval(() => {
+      setNumber(number => number + 1);
+      
+    }, 1000);
+
+    
+  }
+ /*  useEffect(() => {
+    let id = setInterval(() => {
+      setNumber(number + 1);
+      incrementLevel(number);
+    }, 1000);
+    return () => clearInterval(id);
+  }); */
   
-    const handleClick = () => {
-      setInterval(() => {
-        setCount(prevCount => prevCount + 1);
-      }, 1000);
-      document.title = `Kliknięto ${count} razy`;
-    }
+  /* const handleClick = () => {
+    setInterval(() => {
+      setNumber(prevCount => prevCount + 1);
+    }, 1000);
+    incrementLevel(prevCount => prevCount );
+  } */
 
  /*  const Example = () => {
     const [count, setCount] = useState(0);
@@ -153,7 +167,7 @@ function App() {
        <h1>Tally Counter</h1>
       </header>
       <Display displayNumber={number} displayLevel={level}/>
-      <Button incrementMethod={Increment} />
+      <Button incrementMethod={increment} />
       <button onClick={handleClick}>Start counting</button>
      {/*  <Counter/> */}
     
