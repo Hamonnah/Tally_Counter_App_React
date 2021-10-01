@@ -1,7 +1,6 @@
 .Button {
     display: flex;
     justify-content: center;
-   
 }
 
 button {
@@ -13,6 +12,10 @@ button {
     border: 1px solid #282c34;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+button:disabled {
+    opacity: 0.5;
 }
 
 button:hover {
